@@ -1,0 +1,9 @@
+<form #form="ngForm">
+    <div class="form-group" *ngFor="let i of inputs">
+        <label for="name">{{i.label}}</label>
+        <input type="text" class="form-control" ngModel name="{{i.name}}">
+    </div>   
+    <div class="form-group mt-1">
+        <button class="btn btn-primary w-100" (click)="send(form)">{{btnName}}</button>
+    </div>
+</form>
